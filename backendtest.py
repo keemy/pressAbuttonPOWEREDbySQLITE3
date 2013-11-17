@@ -1,5 +1,5 @@
 #!/usr/bin/python
-print "Content-Type: application/json"
+print "Content-Type: text/html"
 print
 
 
