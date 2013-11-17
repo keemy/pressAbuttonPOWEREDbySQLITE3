@@ -17,7 +17,7 @@ c=conn.cursor()
 cookie= Cookie.SimpleCookie(os.environ["HTTP_COOKIE"])
 
 if "userName" not in cookie:
-    print "fuck u"
+    print "I don't know who you are bud"
     exit()
 
 userName=cookie["userName"].value
