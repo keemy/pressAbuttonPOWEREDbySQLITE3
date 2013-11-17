@@ -1,5 +1,5 @@
 var listOfTests=["sound","visual"];
-
+var userName=prompt("whats ur name");
 $( document ).ready(function() {
 	function IncrementAndReturn(){
 		$.ajax("backendtest.py").done(function(data){

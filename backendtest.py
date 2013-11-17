@@ -6,10 +6,13 @@ print
 import cgi
 import cgitb
 import sqlite3
+import os
 cgitb.enable()
 conn = sqlite3.connect('test.db')
 c=conn.cursor()
 
+
+print os.environ["HTTP_COOKIE"]
 
 form=cgi.FieldStorage()
 
