@@ -8,6 +8,7 @@ import cgitb
 import sqlite3
 import os
 import Cookie
+import json
 cgitb.enable()
 conn = sqlite3.connect('test.db')
 c=conn.cursor()
@@ -30,7 +31,14 @@ if "readonly" not in form:
 
 c.execute("SELECT count FROM counters WHERE userName=?",(userName,))
 count=c.fetchone()
-print count[0]
+c.execute("SELECT sum(count) FROM counters")
+total=c.fetchone()
+ar=[count,total]
+
+print json.dumps(ar)
+
+
+print total
 
 
 conn.commit()
