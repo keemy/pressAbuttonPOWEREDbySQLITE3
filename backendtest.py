@@ -18,7 +18,7 @@ cookie= Cookie.SimpleCookie(os.environ["HTTP_COOKIE"])
 
 if "userName" not in cookie:
     print "fuck u"
-    os.exit()
+    exit()
 
 userName=cookie["userName"].value
 
