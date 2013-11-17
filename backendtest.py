@@ -33,12 +33,10 @@ c.execute("SELECT count FROM counters WHERE userName=?",(userName,))
 count=c.fetchone()
 c.execute("SELECT sum(count) FROM counters")
 total=c.fetchone()
-ar=[count,total]
+ar=count+total
 
 print json.dumps(ar)
 
-
-print total
 
 
 conn.commit()
