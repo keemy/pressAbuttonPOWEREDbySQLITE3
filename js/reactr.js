@@ -28,7 +28,7 @@ function getCookie(name) {
 } 
 
 function checkCookieAndSet() {
-    var myCookie = getCookie("MyCookie");
+    var myCookie = getCookie("userName");
 
     if (myCookie == null) {
         // do cookie doesn't exist stuff;
