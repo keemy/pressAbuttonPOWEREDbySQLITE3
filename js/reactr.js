@@ -13,14 +13,14 @@ setCookie("userName",userName,30);
 $( document ).ready(function() {
 	function IncrementAndReturn(){
 		$.getJSON("backendtest.py").done(function(data){
-			$("#counter").text(data[0]);
-			$("#global").text(data[1]);
+			$("#counter").text("Your Button Presses: "+data[0]);
+			$("#global").text("Total Button Presses: "+data[1]);
 		});
 	}
 	function CounterValue(){
 		$.getJSON("backendtest.py?readonly=true").done(function(data){
-			$("#counter").text(data[0]);
-			$("#global").text(data[1]);
+			$("#counter").text("Your Button Presses: "+data[0]);
+			$("#global").text("Total Button Presses: "+data[1]);
 		});
 	}
 	
