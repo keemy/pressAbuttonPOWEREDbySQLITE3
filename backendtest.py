@@ -26,7 +26,7 @@ form=cgi.FieldStorage()
 c.execute("INSERT or IGNORE INTO counters VALUES (?,0)",(userName,))
 
 if "readonly" not in form:
-    c.execute("UPDATE counter SET count=count+1 WHERE userName=?",(userName,))
+    c.execute("UPDATE counters SET count=count+1 WHERE userName=?",(userName,))
 
 c.execute("SELECT count FROM counters WHERE userName=?",(userName,))
 count=c.fetchone()
