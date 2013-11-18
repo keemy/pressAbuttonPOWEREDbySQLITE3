@@ -8,38 +8,7 @@ function setCookie(c_name,value,exdays){
 	document.cookie=c_name + "=" + c_value;
 }
 
-function getCookie(name) {
-    var dc = document.cookie;
-    var prefix = name + "=";
-    var begin = dc.indexOf("; " + prefix);
-    if (begin == -1) {
-        begin = dc.indexOf(prefix);
-        if (begin != 0) return null;
-    }
-    else
-    {
-        begin += 2;
-        var end = document.cookie.indexOf(";", begin);
-        if (end == -1) {
-        end = dc.length;
-        }
-    }
-    return unescape(dc.substring(begin + prefix.length, end));
-} 
-
-function checkCookieAndSet() {
-    var myCookie = getCookie("userName");
-
-    if (myCookie == null) {
-        // do cookie doesn't exist stuff;
-		setCookie("userName",userName,30);
-    }
-    else {
-        // do cookie exists stuff
-    }
-}
-
-checkCookieAndSet();
+setCookie("userName",userName,30);
 
 
 $( document ).ready(function() {
